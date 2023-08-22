@@ -9,8 +9,8 @@ const placeOrder = async (req, res) => {
     const config = {
         service: 'gmail',
         auth: {
-            user: 'zojeearsal@gmail.com',
-            pass: 'lwkvszytnvdpoynj'
+            user: 'sawerarasheed997@gmail.com',
+            pass: process.env.NODEMAILER_PASSWORD
         }
     }
 

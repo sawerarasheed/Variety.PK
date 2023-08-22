@@ -12,7 +12,7 @@ const productRouter = require('./API/Products/Router')
 const orderRouter = require('./API/order/Router')
 
 const port = process.env.SERVER_PORT || 3200
-app.use("/",express.static(path.join(__dirname,"./Client/dist")))
+app.use("/",express.static(path.join(__dirname,"./client/dist")))
 app.use(express.json())
 app.use(cors(
   // {
@@ -28,7 +28,7 @@ app.use('/api', orderRouter)
 
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname,"./Client/dist/index.html"))
+  res.sendFile(path.join(__dirname,"./client/dist/index.html"))
 })
 
 app.listen(port, () => {
